@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz de Habilidades para Roles de IA 2025 - PowerPoint</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .slide-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 25px;
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            color: white;
+            font-size: 14px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .critical { 
+            background: linear-gradient(135deg, #1a365d, #2d3748); 
+        }
+        .important { 
+            background: linear-gradient(135deg, #2563eb, #3b82f6); 
+        }
+        .nice-to-have { 
+            background: linear-gradient(135deg, #059669, #10b981); 
+        }
+        .not-required {
+            background: linear-gradient(135deg, #6b7280, #9ca3af);
+        }
+        
+        .matrix-wrapper {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 15px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 1200px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        th, td {
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            padding: 10px 8px;
+            font-size: 11px;
+        }
+        th {
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            font-weight: 700;
+            color: #374151;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            height: 140px;
+            min-width: 65px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        th.skill-header {
+            writing-mode: horizontal-tb;
+            text-orientation: initial;
+            height: auto;
+            text-align: left;
+            min-width: 220px;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            font-weight: 700;
+            position: sticky;
+            left: 0;
+            z-index: 20;
+        }
+        .skill-0 { 
+            background: #f8fafc; 
+            color: #64748b; 
+            font-weight: 500;
+        }
+        .skill-1 { 
+            background: linear-gradient(135deg, #ecfdf5, #d1fae5); 
+            color: #065f46; 
+            font-weight: 600;
+        }
+        .skill-2 { 
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe); 
+            color: #1e40af; 
+            font-weight: 700;
+        }
+        .skill-3 { 
+            background: linear-gradient(135deg, #1e293b, #334155); 
+            color: white; 
+            font-weight: 700;
+            box-shadow: inset 0 1px 2px rgba(255,255,255,0.1);
+        }
+        
+        .category-header {
+            background: linear-gradient(135deg, #7c3aed, #a855f7) !important;
+            color: white !important;
+            font-weight: 700;
+            text-align: center;
+            writing-mode: horizontal-tb;
+            text-orientation: initial;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .footer {
+            background: #f1f5f9;
+            padding: 20px;
+            text-align: center;
+            color: #64748b;
+            font-size: 12px;
+            border-top: 3px solid #3b82f6;
+        }
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .role-card {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            padding: 8px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 11px;
+            font-weight: 600;
+            color: #0369a1;
+            border: 2px solid #0ea5e9;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>🤖 Matriz de Habilidades para Roles de IA 2025</h1>
+            <p>Guía completa de competencias técnicas para profesionales en Inteligencia Artificial</p>
+        </div>
+        
+        <div class="content">
+            <div class="legend">
+                <div class="legend-item critical">
+                    <span style="font-size: 16px; font-weight: bold;">3</span>
+                    <span>Crítico</span>
+                </div>
+                <div class="legend-item important">
+                    <span style="font-size: 16px; font-weight: bold;">2</span>
+                    <span>Importante</span>
+                </div>
+                <div class="legend-item nice-to-have">
+                    <span style="font-size: 16px; font-weight: bold;">1</span>
+                    <span>Deseable</span>
+                </div>
+                <div class="legend-item not-required">
+                    <span style="font-size: 16px; font-weight: bold;">0</span>
+                    <span>No requerido</span>
+                </div>
+            </div>
+            
+            <div class="matrix-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill-header">📊 HABILIDADES TÉCNICAS</th>
+                            <th>Ingeniero de IA</th>
+                            <th>Ing. ML</th>
+                            <th>Científico de Datos</th>
+                            <th>Ing. Prompts</th>
+                            <th>Ing. LLM</th>
+                            <th>PM IA</th>
+                            <th>Ing. Datos</th>
+                            <th>MLOps</th>
+                            <th>IA Generativa</th>
+                            <th>Arquitecto IA</th>
+                            <th>Esp. Datos</th>
+                            <th>Gerente IA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="13" class="category-header">🧠 MODELADO Y ALGORITMOS</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">🐍 Python</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-0">0</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">⚡ Frameworks DL</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-0">0</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-0">0</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">🔬 Algoritmos ML</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-0">0</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">🤖 LLMs & RAG</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-0">0</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-0">0</td>
+                        </tr>
+                        <tr>
+                            <td colspan="13" class="category-header">💾 DATOS Y PIPELINES</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">🗃️ SQL</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-1">1</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">🔍 BD Vectoriales</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">📊 NoSQL</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">⚙️ Feature Engineering</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-1">1</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">🔄 Pipelines (Airflow)</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-0">0</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-0">0</td>
+                        </tr>
+                        <tr>
+                            <td colspan="13" class="category-header">🚀 DESPLIEGUE E INFRAESTRUCTURA</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">🐳 APIs & Docker</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-0">0</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">☁️ Cloud Platforms</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">🔧 CI/CD & MLOps</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-0">0</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-0">0</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">🏗️ Arquitectura</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-0">0</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                        </tr>
+                        <tr>
+                            <td colspan="13" class="category-header">💼 NEGOCIO Y COMUNICACIÓN</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">🎯 Business Acumen</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-3">3</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">📈 Visualización</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-0">0</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-0">0</td>
+                            <td class="skill-0">0</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-1">1</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">📋 Product Management</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-0">0</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-0">0</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-header">⚖️ Ética IA</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-3">3</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-2">2</td>
+                            <td class="skill-1">1</td>
+                            <td class="skill-3">3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <strong>💡 Matriz de Habilidades para Roles de IA 2025</strong><br>
+            Niveles: 0=No requerido | 1=Deseable | 2=Importante | 3=Crítico<br>
+            <em>Desarrollado para presentaciones PowerPoint - Diseño optimizado para proyección</em>
+        </div>
+    </div>
+</body>
+</html>
