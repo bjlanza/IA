@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapuntes_ia=self.webpackChunkapuntes_ia||[]).push([[903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/IA/blog","blogTitle":"Blog","authorsListPath":"/IA/blog/authors"}')}}]);
